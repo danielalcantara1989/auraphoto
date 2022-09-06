@@ -37,7 +37,7 @@ add_action( 'wp_enqueue_scripts', 'dacustom_scripts_method' );
  * ADA Popup
  */
 function da_ada_popup() {
-    echo '
+    $output = '
     <div class="ada-popup">
       <div class="ada-popup-inner">
         <div class="ada-popup-header">
@@ -123,5 +123,7 @@ function da_ada_popup() {
       </div>
     </div>
     ';
+
+    return $output;
 }
 add_action( 'wp_footer', 'da_ada_popup' );

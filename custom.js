@@ -237,7 +237,6 @@
 	    $('body').on('click', 'a.on-switch', function(e){
 	    	e.preventDefault();
 
-	    	//Repo
 	    	//Store Vars
 	    	var _this = $(this),
 	    		adactrl = $('.ada-controlled'),

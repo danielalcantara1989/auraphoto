@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit( 'Direct script access denied.' );
 }
 ?>
-						<?php do_action( 'avada_after_main_content' ); ?>
+				<?php do_action( 'avada_after_main_content' ); ?>
 
 					</div>  <!-- fusion-row -->
 				</main>  <!-- #main -->

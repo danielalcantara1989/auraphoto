@@ -73,7 +73,7 @@ if ( 'modern' === Avada()->settings->get( 'mobile_menu_design' ) ) {
 	<?php if ( ( ( 'Boxed' === Avada()->settings->get( 'layout' ) && 'default' === $page_bg_layout ) || 'boxed' === $page_bg_layout ) && 'framed' === Avada()->settings->get( 'scroll_offset' ) ) : ?>
 		<div class="fusion-sides-frame"></div>
 	<?php endif; ?>
-	<div id="wrapper" class="<?php echo esc_attr( $wrapper_class ); ?> ada-controlled">
+	<div id="wrapper" class="<?php echo esc_attr( $wrapper_class ); ?> ada-controlled ada-header">
 		<div id="home" style="position:relative;top:-1px;"></div>
 		
 		<?php //avada_header_template( 'Below', ( is_archive() || Avada_Helper::bbp_is_topic_tag() ) && ! ( class_exists( 'WooCommerce' ) && is_shop() ) ); ?>
