@@ -87,7 +87,7 @@ a.fusion-button.rainbow-btn span {
  */
 
 .ada-popup {
-	position: absolute;
+	position: fixed;
 	width: 360px;
 	left: 0px;
 	background: #fbfbfb;
@@ -101,7 +101,7 @@ a.fusion-button.rainbow-btn span {
 }
 
 .ada-popup.show {
-	position: absolute;
+	position: fixed;
 	width: 360px;
 	left: 50px;
 	background: #fbfbfb;
@@ -352,6 +352,13 @@ a.fusion-button.rainbow-btn span {
 	background: #000000!important;
 }
 
+body.dark-mode-apply .ada-controlled div,
+body.dark-mode-apply .ada-controlled section,
+body.dark-mode-apply .ada-controlled nav,
+body.dark-mode-apply .ada-controlled main {
+	background: #000000!important;
+}
+
 .ada-controlled.dark-mode-apply .post-content > .fusion-fullwidth.ada-header,
 .ada-controlled.dark-mode-apply .post-content > .fusion-fullwidth.ada-footer  {
 	background: #000000!important;
@@ -388,6 +395,36 @@ a.fusion-button.rainbow-btn span {
 .ada-controlled.dark-mode-apply h5,
 .ada-controlled.dark-mode-apply h6 {
 	color: #ffffff!important;
+	background: #000000!important;
+}
+
+body header.dark-mode-apply,
+body header div.dark-mode-apply,
+body header section.dark-mode-apply,
+body header nav.dark-mode-apply,
+body header main.dark-mode-apply,
+body .ada-header.dark-mode-apply,
+body .ada-header div.dark-mode-apply {
+	background: #000000!important;
+}
+
+body footer.dark-mode-apply,
+body footer div.dark-mode-apply,
+body footer section.dark-mode-apply,
+body footer nav.dark-mode-apply,
+body footer main.dark-mode-apply,
+body .ada-header.dark-mode-apply,
+body .ada-header div.dark-mode-apply {
+	background: #000000!important;
+}
+
+body.dark-mode-apply,
+body .ada-controlled header.dark-mode-apply,
+body .ada-controlled footer.dark-mode-apply,
+body .ada-controlled div.dark-mode-apply,
+body .ada-controlled section.dark-mode-apply,
+body .ada-controlled nav.dark-mode-apply,
+body .ada-controlled main.dark-mode-apply {
 	background: #000000!important;
 }
 

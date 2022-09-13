@@ -19,6 +19,8 @@
 	    $('body').on('click', '.accessibility-menu a', function(e){
 	    	e.preventDefault();
 
+	    	console.log('Accessibility Clicked');
+
 	    	//Store Vars
 	    	var windowwidth = $(window).width(),
 	    		adactrl = $('.ada-controlled'),
@@ -311,7 +313,14 @@
 	    		footerdivs = $('body footer div'),
 	    		footersections = $('body footer section'),
 	    		footernavs = $('body footer nav'),
-	    		footermain = $('body footer main');
+	    		footermain = $('body footer main'),
+	    		body = $('body'),
+	    		bodyheader = $('body .ada-controlled header'),
+	    		bodyfooter = $('body .ada-controlled footer'),
+	    		bodydivs = $('body .ada-controlled div'),
+	    		bodysections = $('body .ada-controlled section'),
+	    		bodynavs = $('body .ada-controlled nav'),
+	    		bodymain = $('body .ada-controlled main');
 
 	    	//Check if Dark Mode
 	    	if ( 
@@ -332,48 +341,80 @@
 	    			//Update Submenu BG
 	    			submenu.each(function(i){
 	    				var __this = $(this);
-	    				__this.css('background', '');
+	    				__this.removeClass('dark-mode-apply');
 	    			});
+	    			
 	    			//All Header Codes
 	    			//Add ADA Class to Header
 	    			header.removeClass('ada-dark-apply');
 	    			//Apply to Inner Header Divs
 	    			headerdivs.each(function(i){
 	    				var __this = $(this);
-	    				__this.css('background', '');
+	    				__this.removeClass('dark-mode-apply');
 	    			});
 	    			//Apply to Inner Header Sections
 	    			headersections.each(function(i){
 	    				var __this = $(this);
-	    				__this.css('background', '');
+	    				__this.removeClass('dark-mode-apply');
 	    			});
 	    			//Apply to Inner Header Navs
 	    			headernavs.each(function(i){
 	    				var __this = $(this);
-	    				__this.css('background', '');
+	    				__this.removeClass('dark-mode-apply');
 	    			});
 	    			//Apply to Inner Header Main
 	    			headermain.each(function(i){
 	    				var __this = $(this);
-	    				__this.css('background', '');
+	    				__this.removeClass('dark-mode-apply');
 	    			});
+	    			
 	    			//All Footer Codes
 	    			//Add ADA Class to Footer
 	    			footer.removeClass('ada-dark-apply');
 	    			//Apply to Inner Footer Divs
 	    			footerdivs.each(function(i){
 	    				var __this = $(this);
-	    				__this.css('background', '');
+	    				__this.removeClass('dark-mode-apply');
 	    			});
 	    			//Apply to Inner Footer Sections
 	    			footersections.each(function(i){
 	    				var __this = $(this);
-	    				__this.css('background', '');
+	    				__this.removeClass('dark-mode-apply');
 	    			});
 	    			//Apply to Inner Footer Sections
 	    			footernavs.each(function(i){
 	    				var __this = $(this);
-	    				__this.css('background', '');
+	    				__this.removeClass('dark-mode-apply');
+	    			});
+
+	    			//All Body Codes
+	    			//Add ADA Class to Body
+	    			body.removeClass('ada-dark-apply');
+	    			//Apply to Body Divs
+	    			bodydivs.each(function(i){
+	    				var __this = $(this),
+	    					bg = __this.attr('attr-bg');
+	    				__this.removeClass('dark-mode-apply');
+	    			});
+	    			//Apply to Body Sections
+	    			bodysections.each(function(i){
+	    				var __this = $(this);
+	    				__this.removeClass('dark-mode-apply');
+	    			});
+	    			//Apply to Body Navs
+	    			bodynavs.each(function(i){
+	    				var __this = $(this);
+	    				__this.removeClass('dark-mode-apply');
+	    			});
+	    			//Apply to Body Header
+	    			bodyheader.each(function(i){
+	    				var __this = $(this);
+	    				__this.removeClass('dark-mode-apply');
+	    			});
+	    			//Apply to Body Footer
+	    			bodyfooter.each(function(i){
+	    				var __this = $(this);
+	    				__this.removeClass('dark-mode-apply');
 	    			});
 		    	} else {
 		    		//Turn On Button
@@ -393,48 +434,80 @@
 		    			//Update Submenu BG
 		    			submenu.each(function(i){
 		    				var __this = $(this);
-		    				__this.css('background', black);
+		    				__this.addClass('dark-mode-apply');
 		    			});
+		    			
 		    			//All Header Codes
 		    			//Add ADA Class to Header
 		    			header.addClass('ada-dark-apply');
 		    			//Apply to Inner Header Divs
 		    			headerdivs.each(function(i){
 		    				var __this = $(this);
-		    				__this.css('background', black);
+		    				__this.addClass('dark-mode-apply');
 		    			});
 		    			//Apply to Inner Header Sections
 		    			headersections.each(function(i){
 		    				var __this = $(this);
-		    				__this.css('background', black);
+		    				__this.addClass('dark-mode-apply');
 		    			});
 		    			//Apply to Inner Header Navs
 		    			headernavs.each(function(i){
 		    				var __this = $(this);
-		    				__this.css('background', black);
+		    				__this.addClass('dark-mode-apply');
 		    			});
 		    			//Apply to Inner Header Main
 		    			headermain.each(function(i){
 		    				var __this = $(this);
-		    				__this.css('background', black);
+		    				__this.addClass('dark-mode-apply');
 		    			});
+		    			
 		    			//All Footer Codes
 		    			//Add ADA Class to Footer
 		    			footer.addClass('ada-dark-apply');
 		    			//Apply to Inner Footer Divs
 		    			footerdivs.each(function(i){
 		    				var __this = $(this);
-		    				__this.css('background', black);
+		    				__this.addClass('dark-mode-apply');
 		    			});
 		    			//Apply to Inner Footer Sections
 		    			footersections.each(function(i){
 		    				var __this = $(this);
-		    				__this.css('background', black);
+		    				__this.addClass('dark-mode-apply');
 		    			});
-		    			//Apply to Inner Footer Sections
+		    			//Apply to Inner Footer Navs
 		    			footernavs.each(function(i){
 		    				var __this = $(this);
-		    				__this.css('background', black);
+		    				__this.addClass('dark-mode-apply');
+		    			});
+
+		    			//All Body Codes
+		    			//Add ADA Class to Body
+		    			body.addClass('ada-dark-apply');
+		    			//Apply to Body Divs
+		    			bodydivs.each(function(i){
+		    				var __this = $(this),
+		    					bg = __this.css('background-color');
+		    				__this.addClass('dark-mode-apply');
+		    			});
+		    			//Apply to Body Sections
+		    			bodysections.each(function(i){
+		    				var __this = $(this);
+		    				__this.addClass('dark-mode-apply');
+		    			});
+		    			//Apply to Body Navs
+		    			bodynavs.each(function(i){
+		    				var __this = $(this);
+		    				__this.addClass('dark-mode-apply');
+		    			});
+		    			//Apply to Body Header
+		    			bodyheader.each(function(i){
+		    				var __this = $(this);
+		    				__this.addClass('dark-mode-apply');
+		    			});
+		    			//Apply to Body Footer
+		    			bodyfooter.each(function(i){
+		    				var __this = $(this);
+		    				__this.addClass('dark-mode-apply');
 		    			});
 		    		}
 		    	}
@@ -459,7 +532,24 @@
 	    		white = '#ffffff',
 	    		darktext = '#212934',
 	    		header = $('body header'),
-	    		footer = $('body footer');
+	    		headerdivs = $('body header div'),
+	    		headersections = $('body header section'),
+	    		headernavs = $('body header nav'),
+	    		headermain = $('body header main'),
+	    		headerv2 = $('body .ada-header'),
+	    		headerv2divs = $('body .ada-header div'),
+	    		footer = $('body footer'),
+	    		footerdivs = $('body footer div'),
+	    		footersections = $('body footer section'),
+	    		footernavs = $('body footer nav'),
+	    		footermain = $('body footer main'),
+	    		body = $('body'),
+	    		bodyheader = $('body .ada-controlled header'),
+	    		bodyfooter = $('body .ada-controlled footer'),
+	    		bodydivs = $('body .ada-controlled div'),
+	    		bodysections = $('body .ada-controlled section'),
+	    		bodynavs = $('body .ada-controlled nav'),
+	    		bodymain = $('body .ada-controlled main');
 
 	    	//Check if Dark Mode
 	    	if ( 
@@ -480,7 +570,50 @@
 	    			//Update Submenu BG
 	    			submenu.each(function(i){
 	    				var __this = $(this);
-	    				__this.css('background', '');
+	    				__this.removeClass('light-mode-apply');
+	    			});
+
+	    			//All Header Codes
+	    			//Add ADA Class to Header
+	    			header.removeClass('ada-light-apply');
+	    			//Apply to Inner Header Divs
+	    			headerdivs.each(function(i){
+	    				var __this = $(this);
+	    				__this.removeClass('light-mode-apply');
+	    			});
+	    			//Apply to Inner Header Sections
+	    			headersections.each(function(i){
+	    				var __this = $(this);
+	    				__this.removeClass('light-mode-apply');
+	    			});
+	    			//Apply to Inner Header Navs
+	    			headernavs.each(function(i){
+	    				var __this = $(this);
+	    				__this.removeClass('light-mode-apply');
+	    			});
+	    			//Apply to Inner Header Main
+	    			headermain.each(function(i){
+	    				var __this = $(this);
+	    				__this.removeClass('light-mode-apply');
+	    			});
+
+	    			//All Footer Codes
+	    			//Add ADA Class to Footer
+	    			footer.addClass('ada-light-apply');
+	    			//Apply to Inner Footer Divs
+	    			footerdivs.each(function(i){
+	    				var __this = $(this);
+	    				__this.addClass('light-mode-apply');
+	    			});
+	    			//Apply to Inner Footer Sections
+	    			footersections.each(function(i){
+	    				var __this = $(this);
+	    				__this.addClass('light-mode-apply');
+	    			});
+	    			//Apply to Inner Footer Navs
+	    			footernavs.each(function(i){
+	    				var __this = $(this);
+	    				__this.addClass('light-mode-apply');
 	    			});
 		    	} else {
 		    		//Turn On Button
@@ -501,6 +634,79 @@
 		    			submenu.each(function(i){
 		    				var __this = $(this);
 		    				__this.css('background', white);
+		    			});
+
+		    			//All Header Codes
+		    			//Add ADA Class to Header
+		    			header.addClass('ada-light-apply');
+		    			//Apply to Inner Header Divs
+		    			headerdivs.each(function(i){
+		    				var __this = $(this);
+		    				__this.addClass('light-mode-apply');
+		    			});
+		    			//Apply to Inner Header Sections
+		    			headersections.each(function(i){
+		    				var __this = $(this);
+		    				__this.addClass('light-mode-apply');
+		    			});
+		    			//Apply to Inner Header Navs
+		    			headernavs.each(function(i){
+		    				var __this = $(this);
+		    				__this.addClass('light-mode-apply');
+		    			});
+		    			//Apply to Inner Header Main
+		    			headermain.each(function(i){
+		    				var __this = $(this);
+		    				__this.addClass('light-mode-apply');
+		    			});
+
+		    			//All Footer Codes
+		    			//Add ADA Class to Footer
+		    			footer.addClass('ada-light-apply');
+		    			//Apply to Inner Footer Divs
+		    			footerdivs.each(function(i){
+		    				var __this = $(this);
+		    				__this.addClass('light-mode-apply');
+		    			});
+		    			//Apply to Inner Footer Sections
+		    			footersections.each(function(i){
+		    				var __this = $(this);
+		    				__this.addClass('light-mode-apply');
+		    			});
+		    			//Apply to Inner Footer Navs
+		    			footernavs.each(function(i){
+		    				var __this = $(this);
+		    				__this.addClass('light-mode-apply');
+		    			});
+
+		    			//All Body Codes
+		    			//Add ADA Class to Body
+		    			body.addClass('ada-light-apply');
+		    			//Apply to Body Divs
+		    			bodydivs.each(function(i){
+		    				var __this = $(this),
+		    					bg = __this.css('background-color');
+		    				__this.addClass('light-mode-apply');
+		    			});
+		    			//Apply to Body Sections
+		    			bodysections.each(function(i){
+		    				var __this = $(this);
+		    				__this.addClass('light-mode-apply');
+		    			});
+		    			//Apply to Body Navs
+		    			bodynavs.each(function(i){
+		    				var __this = $(this);
+		    				__this.addClass('light-mode-apply');
+		    			});
+		    			//Apply to Body Header
+		    			bodyheader.each(function(i){
+		    				var __this = $(this);
+		    				__this.addClass('light-mode-apply');
+		    			});
+		    			//Apply to Body Footer
+		    			bodyfooter.each(function(i){
+		    				var __this = $(this);
+		    				__this.addClass('light-mode-apply');
 		    			});
 		    		}
 		    	}

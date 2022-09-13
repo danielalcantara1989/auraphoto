@@ -124,6 +124,6 @@ function da_ada_popup() {
     </div>
     ';
 
-    return $output;
+    echo $output;
 }
 add_action( 'wp_footer', 'da_ada_popup' );
