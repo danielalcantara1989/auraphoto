@@ -428,7 +428,95 @@ body .ada-controlled main.dark-mode-apply {
 	background: #000000!important;
 }
 
-.ada-controlled.light-mode-apply .post-content > .fusion-fullwidth {
+.ada-controlled.light-mode-apply header,
+.ada-controlled.light-mode-apply footer  {
+	background: #ffffff!important;
+}
+
+.ada-controlled.light-mode-apply header div,
+.ada-controlled.light-mode-apply header section,
+.ada-controlled.light-mode-apply header nav,
+.ada-controlled.light-mode-apply header main,
+.ada-controlled.light-mode-apply footer div,
+.ada-controlled.light-mode-apply footer section,
+.ada-controlled.light-mode-apply footer nav,
+.ada-controlled.light-mode-apply footer main {
+	background: #ffffff!important;
+}
+
+body.light-mode-apply .ada-controlled div,
+body.light-mode-apply .ada-controlled section,
+body.light-mode-apply .ada-controlled nav,
+body.light-mode-apply .ada-controlled main {
+	background: #ffffff!important;
+}
+
+.ada-controlled.light-mode-apply .post-content > .fusion-fullwidth.ada-header,
+.ada-controlled.light-mode-apply .post-content > .fusion-fullwidth.ada-footer  {
+	background: #ffffff!important;
+}
+
+.ada-controlled.light-mode-apply header .ada-light-apply,
+.ada-controlled.light-mode-apply footer .ada-light-apply {
+	background: #ffffff!important;
+}
+
+.ada-controlled.light-mode-apply .post-content > .fusion-fullwidth.ada-header .ada-light-apply,
+.ada-controlled.light-mode-apply .post-content > .fusion-fullwidth.ada-footer .ada-light-apply {
+	background: #ffffff!important;
+}
+
+.ada-controlled.light-mode-apply footer.fusion-footer-widget-area,
+.ada-controlled.light-mode-apply footer.fusion-footer-copyright-area {
+	background: #ffffff!important;
+}
+
+.ada-controlled.light-mode-apply p,
+.ada-controlled.light-mode-apply span,
+.ada-controlled.light-mode-apply i,
+.ada-controlled.light-mode-apply em,
+.ada-controlled.light-mode-apply a,
+.ada-controlled.light-mode-apply li,
+.ada-controlled.light-mode-apply label,
+.ada-controlled.light-mode-apply input,
+.ada-controlled.light-mode-apply strong,
+.ada-controlled.light-mode-apply h1,
+.ada-controlled.light-mode-apply h2,
+.ada-controlled.light-mode-apply h3,
+.ada-controlled.light-mode-apply h4,
+.ada-controlled.light-mode-apply h5,
+.ada-controlled.light-mode-apply h6 {
+	color: #000000!important;
+	background: #ffffff!important;
+}
+
+body header.light-mode-apply,
+body header div.light-mode-apply,
+body header section.light-mode-apply,
+body header nav.light-mode-apply,
+body header main.light-mode-apply,
+body .ada-header.light-mode-apply,
+body .ada-header div.light-mode-apply {
+	background: #ffffff!important;
+}
+
+body footer.light-mode-apply,
+body footer div.light-mode-apply,
+body footer section.light-mode-apply,
+body footer nav.light-mode-apply,
+body footer main.light-mode-apply,
+body .ada-header.light-mode-apply,
+body .ada-header div.light-mode-apply {
+	background: #ffffff!important;
+}
+
+body.light-mode-apply,
+body .ada-controlled header.light-mode-apply,
+body .ada-controlled footer.light-mode-apply,
+body .ada-controlled div.light-mode-apply,
+body .ada-controlled section.light-mode-apply,
+body .ada-controlled nav.light-mode-apply,
+body .ada-controlled main.light-mode-apply {
 	background: #ffffff!important;
 }
 

@@ -515,6 +515,52 @@
 
 	    });
 
+		//Dark Mode
+		//Turn Off Light Mode
+	    $('body').on('click', 'a.on-switch', function(e){
+	    	e.preventDefault();
+
+	    	//Store Vars
+	    	var _this = $(this),
+	    		adactrl = $('.ada-controlled'),
+	    		lightswitch = $('.on-switch.light-mode');
+
+	    	//Check if Dark Mode
+	    	if ( 
+	    		_this.hasClass('dark-mode') 
+	    	) {
+		    	//Turn Buttons On/Off
+		    	if ( 
+		    		!_this.hasClass('on') 
+		    	) {
+		    		//Do Nothing
+		    	} else {
+		    		//Turn On Button
+		    		console.log('Dark Mode');
+		    		if ( 
+		    			_this.hasClass('on') 
+		    		) {
+		    			console.log('Turn Off Triggered');
+		    			//Turn Off Light Mode
+		    			//Turn Off Switch
+		    			if ( !lightswitch.hasClass('on') ) {
+		    				//Do Nothing
+		    			} else {
+		    				lightswitch.removeClass('on');
+		    			}
+		    			//Turn Off Main Class
+		    			if ( !adactrl.hasClass('light-mode-apply') ) {
+		    				//Do Nothing
+		    			} else {
+		    				adactrl.removeClass('light-mode-apply');
+		    			}
+		    			
+		    		}
+		    	}
+		    }
+
+	    });
+
 	    //Light Mode
 	    $('body').on('click', 'a.on-switch', function(e){
 	    	e.preventDefault();
@@ -599,21 +645,51 @@
 
 	    			//All Footer Codes
 	    			//Add ADA Class to Footer
-	    			footer.addClass('ada-light-apply');
+	    			footer.removeClass('ada-light-apply');
 	    			//Apply to Inner Footer Divs
 	    			footerdivs.each(function(i){
 	    				var __this = $(this);
-	    				__this.addClass('light-mode-apply');
+	    				__this.removeClass('light-mode-apply');
 	    			});
 	    			//Apply to Inner Footer Sections
 	    			footersections.each(function(i){
 	    				var __this = $(this);
-	    				__this.addClass('light-mode-apply');
+	    				__this.removeClass('light-mode-apply');
 	    			});
 	    			//Apply to Inner Footer Navs
 	    			footernavs.each(function(i){
 	    				var __this = $(this);
-	    				__this.addClass('light-mode-apply');
+	    				__this.removeClass('light-mode-apply');
+	    			});
+
+	    			//All Body Codes
+	    			//Add ADA Class to Body
+	    			body.removeClass('ada-light-apply');
+	    			//Apply to Body Divs
+	    			bodydivs.each(function(i){
+	    				var __this = $(this),
+	    					bg = __this.css('background-color');
+	    				__this.removeClass('light-mode-apply');
+	    			});
+	    			//Apply to Body Sections
+	    			bodysections.each(function(i){
+	    				var __this = $(this);
+	    				__this.removeClass('light-mode-apply');
+	    			});
+	    			//Apply to Body Navs
+	    			bodynavs.each(function(i){
+	    				var __this = $(this);
+	    				__this.removeClass('light-mode-apply');
+	    			});
+	    			//Apply to Body Header
+	    			bodyheader.each(function(i){
+	    				var __this = $(this);
+	    				__this.removeClass('light-mode-apply');
+	    			});
+	    			//Apply to Body Footer
+	    			bodyfooter.each(function(i){
+	    				var __this = $(this);
+	    				__this.removeClass('light-mode-apply');
 	    			});
 		    	} else {
 		    		//Turn On Button
